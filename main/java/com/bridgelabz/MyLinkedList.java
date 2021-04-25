@@ -20,6 +20,8 @@ public class MyLinkedList<K extends Comparable<K>> {
             }
         }
 
+
+        //calling method to printing node
         public void printMyNode() {
             StringBuffer myNodes = new StringBuffer("Nodes are: ");
             INode tempNode = head;
@@ -32,5 +34,12 @@ public class MyLinkedList<K extends Comparable<K>> {
             myNodes.append(tempNode.getKey());
             System.out.println(myNodes);
         }
-    }
+        //Ability to pop from stack
+        public INode<K> pop() {
+            INode tempNode = this.head;
+            this.head = head.getNext();
+            return tempNode;
+        }
+        
+}
 
